@@ -1,0 +1,18 @@
+// Botones y enlaces interactivos: .btn, .btn-accent, .btn-neon,
+// .btn-light-outline, .btn-outline-accent, .text-link y estados hover/focus/active.
+// Las reglas vigentes están en _legacy.scss para evitar cambiar la cascada.
+%interactive-surface {
+  border-radius: 1rem;
+  transition:
+    transform variables.$motion-duration ease,
+    box-shadow variables.$motion-duration ease;
+}
+
+.btn-accent {
+  @extend %interactive-surface;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgb(0 240 255 / 15%);
+  }
+}

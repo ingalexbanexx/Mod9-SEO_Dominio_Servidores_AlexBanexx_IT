@@ -1,0 +1,39 @@
+// Componentes repetibles: .feature-card, .project-card, .service-card,
+// .skill-card, .map-card, .contact-form-card y componentes relacionados.
+// Las reglas vigentes están en _legacy.scss hasta completar la migración verificada.
+
+.feature-card {
+  @include transition-interactive(
+    transform,
+    variables.$motion-duration,
+    ease-in-out
+  );
+
+  &:hover {
+    transform: translateY(-variables.$motion-distance);
+  }
+}
+
+.project-card {
+  @include transition-interactive(
+    transform,
+    variables.$motion-duration,
+    ease-in-out
+  );
+
+  &:hover {
+    transform: translateY(-variables.$motion-distance);
+  }
+}
+
+.service-card {
+  @include transition-interactive(
+    transform,
+    variables.$motion-duration,
+    ease-in-out
+  );
+
+  &:hover {
+    transform: translateY(-variables.$motion-distance);
+  }
+}

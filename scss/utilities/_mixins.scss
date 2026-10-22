@@ -1,0 +1,27 @@
+// Mixins reutilizables. Aplicarlos solo al migrar reglas existentes,
+// respetando los breakpoints originales del proyecto.
+
+@mixin respond-max($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin neon-focus($color: vars.$color-cian) {
+  outline: 2px solid $color;
+  outline-offset: 3px;
+}
+
+@mixin neon-border($alpha: 0.4) {
+  border: 1px solid rgba(0, 240, 255, $alpha);
+}
+
+// Transiciones para elementos interactivos (botones, links, inputs, etc.)
+
+@mixin transition-interactive(
+  $property: transform,
+  $duration: variables.$motion-duration,
+  $easing: ease
+) {
+  transition: $property $duration $easing;
+}
